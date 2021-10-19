@@ -38,19 +38,20 @@ namespace lesson10
                 var date = JsonSerializer.Serialize(result.Data.Data.Date.Gregorian.Date, settings).Replace("\"", "");
                 Console.WriteLine($"\nDate: {date}");
                 var json = JsonSerializer.Serialize(result.Data.Data.Timings.Fajr, settings).Replace("\"", "");
-                Console.WriteLine($"Fajr: {json}");
+                Console.Write($"Fajr: {json} | ");
                 json = JsonSerializer.Serialize(result.Data.Data.Timings.Sunrise, settings).Replace("\"", "");
-                Console.WriteLine($"Sunrise: {json}");
+                Console.Write($"Sunrise: {json} | ");
                 json = JsonSerializer.Serialize(result.Data.Data.Timings.Dhuhr, settings).Replace("\"", "");
-                Console.WriteLine($"Dhuhr: {json}");
+                Console.Write($"Dhuhr: {json} | ");
                 json = JsonSerializer.Serialize(result.Data.Data.Timings.Asr, settings).Replace("\"", "");
-                Console.WriteLine($"Asr: {json}");
+                Console.Write($"Asr: {json} | ");
                 json = JsonSerializer.Serialize(result.Data.Data.Timings.Sunset, settings).Replace("\"", "");
-                Console.WriteLine($"Sunset: {json}");
+                Console.Write($"Sunset: {json} | ");
                 json = JsonSerializer.Serialize(result.Data.Data.Timings.Maghrib, settings).Replace("\"", "");
-                Console.WriteLine($"Maghrib: {json}");
+                Console.Write($"Maghrib: {json} | ");
                 json = JsonSerializer.Serialize(result.Data.Data.Timings.Isha, settings).Replace("\"", "");
                 Console.WriteLine($"Isha: {json}");
+                System.Console.WriteLine();
                 
             }
             else
